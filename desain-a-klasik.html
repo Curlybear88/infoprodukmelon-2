@@ -219,7 +219,7 @@ const Lavaland = (function () {
   }
   async function loadRows() {
     if (CONFIG.SHEET_CSV_URL) {
-      try { const rows = csvToObjects(await getText(CONFIG.SHEET_CSV_URL)); if (rows.length) return { rows, sumber: "Google Sheets" }; } catch (e) {}
+      try { const rows = csvToObjects(await getText(CONFIG.SHEET_CSV_URL)); if (rows.length) return { rows, sumber: "https://docs.google.com/spreadsheets/d/e/2PACX-1vR3Ay-klqFomysos7QZnqhb3xmWUAK1R-cFMFjJHoTteHeKnR-cSL0QxooAVYYtRSgn7tPEc2r9-TzQ/pub?gid=1508973481&single=true&output=csv" }; } catch (e) {}
     }
     if (CONFIG.JSON_URL) {
       try {
