@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#5d7f26">
+<title>Melon Premium Lavaland</title>
+<meta property="og:title" content="Melon Premium Lavaland">
+<meta property="og:description" content="Manis buahnya, cermat budidayanya, terjaga kualitasnya.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --card:#f0f7d6; --ink:#4a5f1b; --ink-strong:#3d5012; --hero1:#4f7421; --hero2:#86ad3f; --cream:#f3f1dc;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:#cfdca6;font-family:'Quicksand','Nunito',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);line-height:1.55}
+  .page{max-width:760px;margin:0 auto;background:var(--card);min-height:100vh;box-shadow:0 0 40px rgba(60,80,20,.25)}
+
+  /* Header bertekstur hijau */
+  .hero{position:relative;padding:22px 18px 70px;min-height:220px;display:flex;align-items:center;gap:16px;
+    background:
+      repeating-linear-gradient(115deg,rgba(255,255,255,.07) 0 14px,rgba(0,0,0,.05) 14px 30px),
+      radial-gradient(120% 140% at 80% 0%,var(--hero2),transparent 60%),
+      linear-gradient(160deg,var(--hero1),#6d9530 55%,var(--hero1));
+    color:var(--cream)}
+  .logo{flex:0 0 auto;width:104px;background:#fff;padding:7px;border-radius:2px;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+  .logo img{display:block;width:100%;height:auto}
+  .hero h1{margin:0;font-family:'Fredoka','Baloo 2',system-ui,sans-serif;font-weight:700;text-transform:uppercase;
+    font-size:clamp(28px,8.2vw,56px);line-height:1.02;letter-spacing:.01em;text-shadow:0 3px 0 rgba(30,50,5,.35),0 6px 14px rgba(0,0,0,.25)}
+  .scallop{height:44px;margin-top:-44px;position:relative;
+    background:radial-gradient(circle 44px at 50% 100%,var(--card) 97%,transparent 100%) 0 0/88px 44px repeat-x}
+
+  .body{padding:6px 20px 28px}
+  h2{font-size:1.02rem;margin:1.15em 0 .25em;color:var(--ink-strong);font-weight:700}
+  h2.lead{font-size:1.1rem;margin-top:.4em}
+  p{margin:.35em 0;text-align:justify;hyphens:auto}
+
+  /* Tabel kegiatan budidaya */
+  .kegiatan{margin-top:1.6em}
+  dl.tbl{margin:.4em 0 0;display:grid;grid-template-columns:minmax(118px,40%) 1fr;column-gap:6px}
+  dl.tbl dt,dl.tbl dd{margin:0;padding:5px 0;border-bottom:1px dotted rgba(74,95,27,.35)}
+  dl.tbl dt{font-weight:600}
+  dl.tbl dd::before{content:": ";}
+  dl.tbl dd ul{margin:0;padding:0;list-style:none;display:inline-block;vertical-align:top}
+  .sub{display:block;font-size:.82em;opacity:.85}
+  .skel{display:inline-block;width:8em;height:1em;border-radius:4px;background:linear-gradient(90deg,rgba(74,95,27,.12),rgba(74,95,27,.25),rgba(74,95,27,.12));background-size:200% 100%;animation:sh 1.2s linear infinite}
+  @keyframes sh{to{background-position:-200% 0}}
+  .notfound{padding:14px;border:1px dashed var(--ink);border-radius:10px;margin-top:10px}
+
+  .quote{margin:26px 18px 22px;padding:12px 18px;text-align:center;border:3px solid #5d7f26;border-radius:999px;
+    font-family:'Quicksand',sans-serif;font-style:italic;font-weight:600;font-size:clamp(.95rem,3.4vw,1.35rem);color:#2f400d;background:rgba(255,255,255,.35)}
+  footer{padding:0 20px 28px;text-align:center;font-size:.8rem;opacity:.8}
+  #sumber{display:none}
+  body.debug #sumber{display:block}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <div class="logo"><img src="data:image/webp;base64,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" alt="Lavaland Farmhouse"></div>
+    <h1>Melon Premium Lavaland</h1>
+  </header>
+  <div class="scallop" aria-hidden="true"></div>
+
+  <main class="body">
+    <h2 class="lead">Bukan Sekadar Manis, tetapi Juga Istimewa dalam Proses Produksinya</h2>
+    <p>Tahukah Anda bahwa kualitas buah melon tidak hanya ditentukan oleh rasa manisnya, tetapi juga oleh bagaimana buah tersebut diproduksi?</p>
+    <p>Melon premium kami dibudidayakan secara khusus di dalam greenhouse modern dengan menerapkan teknologi pertanian presisi berbasis Internet of Things (IoT).</p>
+    <p>Melalui teknologi ini, kebutuhan air, nutrisi, dan kondisi lingkungan tumbuh tanaman dipantau secara cermat. Setiap tanaman mendapatkan perawatan yang terukur untuk menghasilkan buah berkualitas tinggi.</p>
+
+    <h2>Lebih Higienis, Lebih Terkendali</h2>
+    <p>Berbeda dengan budidaya di lahan terbuka, lingkungan greenhouse memungkinkan proses produksi berlangsung lebih higienis dan terlindungi dari berbagai gangguan lingkungan luar.</p>
+
+    <h2>Penggunaan Pestisida Diminimalkan</h2>
+    <p>Kami mengutamakan pengelolaan tanaman yang sehat dan pencegahan serangan hama serta penyakit, sehingga kebutuhan penggunaan pestisida kimia dapat ditekan seminimal mungkin.</p>
+    <p>Dengan proses produksi yang lebih terkendali, kami berupaya menghadirkan buah yang tidak hanya lezat, tetapi juga memperhatikan aspek keamanan pangan.</p>
+
+    <h2>Rasa Premium, Kualitas Istimewa</h2>
+    <p>Setiap buah mendapatkan perhatian khusus selama pertumbuhannya agar mampu menghasilkan rasa manis alami, tekstur yang nikmat, dan kesegaran yang optimal.</p>
+    <p>Melon dipanen secara selektif pada tingkat kematangan yang tepat untuk menghadirkan pengalaman menikmati buah yang istimewa.</p>
+
+    <h2 style="margin-top:1.6em">Mengapa Memilih Melon Premium Kami?</h2>
+    <p>Karena Anda tidak hanya membeli buah melon, tetapi juga menikmati hasil dari teknologi modern, ketelitian dalam budidaya, dan komitmen terhadap kualitas.</p>
+
+    <section class="kegiatan" aria-labelledby="judul-kegiatan">
+      <h2 id="judul-kegiatan">Kegiatan Budidaya Melon Lavaland</h2>
+      <div id="kegiatan"><span class="skel"></span></div>
+    </section>
+  </main>
+
+  <div class="quote">“Manis Buahnya, Cermat Budidayanya, Terjaga Kualitasnya.”</div>
+  <footer>
+    <div>MELON PREMIUM LAVALAND · Lavaland Farmhouse</div>
+    <div id="sumber"></div>
+  </footer>
+</div>
+
+<script>
+/* ============================================================
+   PEMUAT DATA "KEGIATAN BUDIDAYA" — Melon Premium Lavaland
+   Urutan sumber data (otomatis pindah ke berikutnya bila gagal):
+   1) Google Sheets  -> isi SHEET_CSV_URL (disarankan, edit dari HP/laptop)
+   2) data.json      -> file di folder yang sama dengan halaman ini
+   3) Cadangan       -> salinan data yang tertanam di bawah (agar halaman
+                        tetap tampil walau internet/server bermasalah)
+   Kode produksi dibaca dari alamat halaman: ...?kode=B300926S2
+   Bila tidak ada, dipakai DEFAULT_KODE.
+   ============================================================ */
+const CONFIG = {
+  SHEET_CSV_URL: "",          // contoh: "https://docs.google.com/spreadsheets/d/e/XXXX/pub?output=csv"
+  JSON_URL: "data.json",
+  DEFAULT_KODE: "B300926S2",
+  TIMEOUT_MS: 6000
+};
+
+/* Cadangan tertanam (otomatis diisi dari data.json saat file dibuat) */
+const FALLBACK = {
+  "_petunjuk": "Satu blok { } = satu kode produksi (satu batch/siklus). Untuk batch baru, salin satu blok lalu ubah isinya. Tanggal: tulis 2026-09-30 atau 30 September 2026. Daftar lebih dari satu item dipisah tanda titik koma (;). Usia Bibit boleh dikosongkan, akan dihitung otomatis dari tanggal semai dan pindah tanam.",
+  "batches": [
+    {
+      "Kode Produksi": "B300926S2",
+      "Varietas": "Kirin",
+      "Jumlah Populasi": "2546",
+      "Lokasi Greenhouse": "GH B",
+      "Siklus": "2",
+      "Musim Tanam": "Peralihan Kemarau ke Penghujan",
+      "Tanggal Perendaman": "2026-09-13",
+      "Tanggal Pemeraman": "2026-09-13",
+      "Tanggal Semai": "2026-09-15",
+      "Usia Bibit": "",
+      "Tanggal Pindah Tanam": "2026-09-30",
+      "Tanggal Polinasi": "2026-10-16",
+      "Tanggal Panen": "2026-11-29",
+      "Hama": "Trips",
+      "Penyakit": "PM; GSB; Mozaik",
+      "Pengendalian Mekanis": "Perompesan daun; Eradikasi tanaman",
+      "Pengendalian Kimiawi": "Antracol 12 HST; Demolish 14 HST; Mancozeb 15 HST; Nimrod 25 HST"
+    }
+  ]
+};
+
+/* Singkatan penyakit/hama -> nama lengkap (boleh ditambah/diubah) */
+const ISTILAH = {
+  "pm": "Powdery mildew (embun tepung)",
+  "gsb": "Gummy stem blight (busuk batang)"
+};
+
+const Lavaland = (function () {
+  const NAMA_BULAN = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
+  const BULAN = {januari:1,februari:2,maret:3,april:4,mei:5,juni:6,juli:7,agustus:8,september:9,oktober:10,november:11,desember:12,
+    january:1,february:2,march:3,may:5,june:6,july:7,august:8,october:10,december:12};
+
+  const norm = s => String(s == null ? "" : s).toLowerCase().replace(/[^a-z0-9]/g, "");
+  const cap = s => s ? s.charAt(0).toUpperCase() + s.slice(1) : s;
+
+  function mk(y, mo, d) {
+    const dt = new Date(Date.UTC(y, mo - 1, d));
+    return dt.getUTCMonth() === mo - 1 ? dt : null;
+  }
+  function parseDate(v) {
+    if (!v) return null;
+    v = String(v).trim();
+    let m = v.match(/^(\d{4})-(\d{1,2})-(\d{1,2})/);
+    if (m) return mk(+m[1], +m[2], +m[3]);
+    m = v.match(/^(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})$/);
+    if (m && BULAN[m[2].toLowerCase()]) return mk(+m[3], BULAN[m[2].toLowerCase()], +m[1]);
+    return null;
+  }
+  const fmtDate = dt => dt.getUTCDate() + " " + NAMA_BULAN[dt.getUTCMonth()] + " " + dt.getUTCFullYear();
+  const daysBetween = (a, b) => Math.round((b - a) / 86400000);
+  const ribuan = n => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+  function splitList(s) {
+    if (!s) return [];
+    const sep = s.indexOf(";") >= 0 ? ";" : ",";
+    return s.split(sep).map(x => cap(x.trim())).filter(Boolean);
+  }
+
+  /* ---------- CSV ---------- */
+  function parseCSV(text) {
+    const rows = []; let row = [], cur = "", q = false;
+    text = text.replace(/^﻿/, "");
+    for (let i = 0; i < text.length; i++) {
+      const c = text[i];
+      if (q) {
+        if (c === '"') { if (text[i + 1] === '"') { cur += '"'; i++; } else q = false; }
+        else cur += c;
+      } else if (c === '"') q = true;
+      else if (c === ",") { row.push(cur); cur = ""; }
+      else if (c === "\n" || c === "\r") {
+        if (c === "\r" && text[i + 1] === "\n") i++;
+        row.push(cur); rows.push(row); row = []; cur = "";
+      } else cur += c;
+    }
+    if (cur !== "" || row.length) { row.push(cur); rows.push(row); }
+    return rows.filter(r => r.some(x => x.trim() !== ""));
+  }
+  function csvToObjects(text) {
+    const rows = parseCSV(text);
+    if (rows.length < 2) return [];
+    const head = rows[0].map(norm);
+    return rows.slice(1).map(r => {
+      const o = {}; head.forEach((h, i) => { if (h) o[h] = (r[i] || "").trim(); }); return o;
+    });
+  }
+  const normRow = o => { const r = {}; Object.keys(o).forEach(k => { if (k.charAt(0) !== "_") r[norm(k)] = o[k]; }); return r; };
+
+  /* ---------- Ambil data ---------- */
+  async function getText(url) {
+    const c = new AbortController(), t = setTimeout(() => c.abort(), CONFIG.TIMEOUT_MS);
+    try {
+      const r = await fetch(url + (url.indexOf("?") >= 0 ? "&" : "?") + "_=" + Date.now(), { cache: "no-store", signal: c.signal });
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      return await r.text();
+    } finally { clearTimeout(t); }
+  }
+  async function loadRows() {
+    if (CONFIG.SHEET_CSV_URL) {
+      try { const rows = csvToObjects(await getText(CONFIG.SHEET_CSV_URL)); if (rows.length) return { rows, sumber: "Google Sheets" }; } catch (e) {}
+    }
+    if (CONFIG.JSON_URL) {
+      try {
+        const j = JSON.parse(await getText(CONFIG.JSON_URL));
+        const arr = Array.isArray(j) ? j : (j.batches || []);
+        if (arr.length) return { rows: arr.map(normRow), sumber: "data.json" };
+      } catch (e) {}
+    }
+    return { rows: (FALLBACK.batches || []).map(normRow), sumber: "cadangan tertanam" };
+  }
+
+  /* ---------- Susun data siap tampil ---------- */
+  function derive(b) {
+    const g = k => { const v = b[norm(k)]; return v == null ? "" : String(v).trim(); };
+    const defs = { rendam: "Tanggal Perendaman", peram: "Tanggal Pemeraman", semai: "Tanggal Semai",
+                   pindah: "Tanggal Pindah Tanam", polinasi: "Tanggal Polinasi", panen: "Tanggal Panen" };
+    const tgl = {};
+    Object.keys(defs).forEach(k => {
+      const raw = g(defs[k]), dt = parseDate(raw);
+      tgl[k] = { dt, text: dt ? fmtDate(dt) : (raw || "—"), hst: "" };
+    });
+    const pindah = tgl.pindah.dt;
+    ["pindah", "polinasi", "panen"].forEach(k => { if (pindah && tgl[k].dt) tgl[k].hst = daysBetween(pindah, tgl[k].dt) + " HST"; });
+
+    let usia = g("Usia Bibit");
+    if (!usia && tgl.semai.dt && pindah) usia = daysBetween(tgl.semai.dt, pindah) + " HSS";
+    else if (/^\d+$/.test(usia)) usia += " HSS";
+
+    let pop = g("Jumlah Populasi");
+    const angka = pop.replace(/[.\s,]/g, "");
+    if (/^\d+$/.test(angka)) pop = ribuan(angka) + " tanaman";
+
+    const istilah = arr => arr.map(x => ({ nama: x, penjelasan: ISTILAH[x.toLowerCase()] || "" }));
+
+    /* Pestisida: "Antracol 12 HST; Demolish 14 HST" -> nama + HST aplikasi (+ tanggal & jarak ke panen) */
+    const kimia = splitList(g("Pengendalian Kimiawi")).map(x => {
+      const m = x.match(/^(.*?)[\s\-–,:(]*(\d+)\s*HST\)?\s*$/i);
+      if (!m || !m[1].trim()) return { nama: x, hst: "", n: null, tanggal: "" };
+      const n = +m[2];
+      const tanggal = pindah ? fmtDate(new Date(pindah.getTime() + n * 86400000)) : "";
+      return { nama: cap(m[1].trim()), hst: n + " HST", n, tanggal };
+    });
+    kimia.sort((a, b) => (a.n == null) - (b.n == null) || (a.n || 0) - (b.n || 0));
+    const bernilai = kimia.filter(k => k.n != null);
+    let terakhir = null;
+    if (bernilai.length) {
+      const k = bernilai[bernilai.length - 1];
+      const hstPanen = (pindah && tgl.panen.dt) ? daysBetween(pindah, tgl.panen.dt) : null;
+      terakhir = { hst: k.hst, sebelumPanen: hstPanen != null && hstPanen >= k.n ? (hstPanen - k.n) : null };
+    }
+    return {
+      kode: g("Kode Produksi") || "—",
+      varietas: g("Varietas") || "—",
+      populasi: pop || "—",
+      lokasi: g("Lokasi Greenhouse") || "—",
+      siklus: g("Siklus") || "—",
+      musim: g("Musim Tanam") || "—",
+      usiaBibit: usia || "—",
+      tgl,
+      hama: istilah(splitList(g("Hama"))),
+      penyakit: istilah(splitList(g("Penyakit"))),
+      mekanis: splitList(g("Pengendalian Mekanis")),
+      kimiawi: kimia,
+      kimiaTerakhir: terakhir
+    };
+  }
+
+  async function load() {
+    const p = new URLSearchParams(location.search);
+    const diminta = (p.get("kode") || CONFIG.DEFAULT_KODE).trim();
+    const { rows, sumber } = await loadRows();
+    const cocok = rows.find(r => norm(r.kodeproduksi) === norm(diminta));
+    return { kode: diminta, sumber, data: cocok ? derive(cocok) : null };
+  }
+
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  return { load, esc, parseDate, fmtDate };
+})();
+
+
+(function () {
+  const E = Lavaland.esc;
+  if (/[?&]debug\b/.test(location.search)) document.body.classList.add("debug");
+
+  const row = (label, value) => "<dt>" + E(label) + "</dt><dd>" + value + "</dd>";
+  const list = arr => arr.length ? E(arr.join(", ")) : "—";
+  const tgl = t => E(t.text) + (t.hst ? ' <span class="sub" style="display:inline;opacity:.75;white-space:nowrap">(' + E(t.hst) + ")</span>" : "");
+
+  function render(d) {
+    const T = d.tgl;
+    const penyakit = d.penyakit.map(x => E(x.nama)).join(", ") || "—";
+    const hama = d.hama.map(x => E(x.nama)).join(", ") || "—";
+    const mek = d.mekanis.length ? d.mekanis.map(E).join(", ") : "—";
+    const kim = d.kimiawi.length
+      ? (d.kimiawi.every(k => k.hst) ? "pestisida " : "") + d.kimiawi.map(k => E(k.nama) + (k.hst ? " " + E(k.hst) : "")).join(", ")
+      : "—";
+    document.getElementById("kegiatan").innerHTML = '<dl class="tbl">' +
+      row("Kode Produksi", "<strong>" + E(d.kode) + "</strong>") +
+      row("Varietas", E(d.varietas)) +
+      row("Jumlah Populasi", E(d.populasi)) +
+      row("Lokasi Greenhouse", E(d.lokasi)) +
+      row("Siklus", E(d.siklus)) +
+      row("Musim Tanam", E(d.musim)) +
+      row("Tanggal Perendaman", tgl(T.rendam)) +
+      row("Tanggal Pemeraman", tgl(T.peram)) +
+      row("Tanggal Semai", tgl(T.semai)) +
+      row("Usia Bibit", E(d.usiaBibit)) +
+      row("Tanggal Pindah Tanam", E(T.pindah.text)) +
+      row("Tanggal Polinasi", tgl(T.polinasi)) +
+      row("Tanggal Panen", tgl(T.panen)) +
+      row("Serangan OPT", "Hama: " + hama + '<span class="sub" style="margin-top:2px">Penyakit: ' + penyakit + "</span>") +
+      row("Pengendalian OPT", "Mekanis (" + mek + ')<span class="sub" style="margin-top:2px">Kimiawi (' + kim + ")</span>") +
+      "</dl>";
+  }
+
+  Lavaland.load().then(r => {
+    document.getElementById("sumber").textContent = "Sumber data: " + r.sumber;
+    if (r.data) { render(r.data); document.title = "Melon Premium Lavaland · " + r.data.kode; }
+    else document.getElementById("kegiatan").innerHTML =
+      '<div class="notfound">Kode produksi “' + E(r.kode) + '” belum terdaftar. Silakan hubungi Lavaland Farmhouse.</div>';
+  });
+})();
+</script>
+</body>
+</html>
